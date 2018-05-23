@@ -352,7 +352,7 @@ p.work-with-us {
 
 .info-company {
     text-align: center;
-    margin: 6rem 0 -10em;
+    margin: 6rem 6rem -10em;
     position: relative;
     padding: 4rem;
     background-image: url("/wp-content/themes/happykite/assets/img/about-bg.jpg");
@@ -360,7 +360,7 @@ p.work-with-us {
     background-position: center center;
     border-radius: 35px;
     @media only screen and (max-width: 768px) {
-        margin: 6rem 1rem -10em;
+        margin: 3rem 0 -10em;
         padding: 1rem;
     }
 
