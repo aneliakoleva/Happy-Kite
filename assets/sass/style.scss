@@ -1,0 +1,404 @@
+/*!
+Theme Name: HappyKite Technical Test
+Theme URI: https://happykite.co.uk/
+Author: happykite
+Author URI: https://happykite.co.uk/
+Description: Happykite Technical Test Theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: hpy
+Tags:
+
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Variables
+# Mixins
+# Bootstrap
+# Typography
+# Elements
+# Forms
+# WordPress Defaults
+# Accessibility
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "components/normalize";
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+@import "components/variables";
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+@import "components/mixins";
+/*--------------------------------------------------------------
+# Bootstrap
+--------------------------------------------------------------*/
+@import "bootstrap";
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "components/setup/typography";
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "components/setup/elements";
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "components/setup/forms";
+/*--------------------------------------------------------------
+# WordPress Defaults
+--------------------------------------------------------------*/
+@import "components/wordpress/wordpress";
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import "components/setup/accessibility";
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+
+a {
+    color: $primary;
+}
+
+#masthead {
+    width: 100%;
+    background: #FFF;
+    padding: 3em 0;
+}
+
+.header-wrap {
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    img {
+        max-width: 50px;
+        transition: transform ease 1s;
+
+        &:hover {
+            transform: rotateY(360deg);
+        }
+    }
+
+    h1,
+    p {
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    h1 {
+        @include font-size(26);
+        font-weight: $bold;
+    }
+
+    p {
+        font-size: 90%;
+        color: $secondary;
+        font-weight: $semibold;
+    }
+
+    .header-inner {
+        margin-left: 1em;
+    }
+}
+
+#content {
+    padding: 3em 0;
+}
+
+.welcome-card {
+    display: flex;
+    background: #FFF;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 3em;
+
+    h2 {
+        color: $secondary;
+        text-transform: uppercase;
+        font-weight: $bold;
+    }
+}
+
+.card-left {
+    flex: 0 0 auto;
+    background: $primary;
+    padding: 1.2em;
+}
+
+.card-right {
+    flex: 1 1 0;
+    padding: 1.5em;
+}
+
+.happy-welcome {
+    text-align: center;
+    margin-bottom: 2em;
+
+    h2 {
+        text-transform: uppercase;
+        color: $secondary;
+    }
+}
+
+p.work-with-us {
+    text-align: center;
+    margin-bottom: 8em;
+}
+
+.site-footer {
+    background: #535767;
+}
+
+.footer-top {
+    padding: 9em 0 5em;
+    text-align: center;
+    color: #FFF;
+
+    h3 {
+        color: $primary;
+        font-weight: $semibold;
+    }
+
+    p {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+.footer-nav {
+    background: #424655;
+    min-height: 4em;
+
+    .navbar {
+        ul {
+            text-align: center;
+            padding: 1em 0;
+
+            li {
+                display: inline-block;
+                padding-left: 2em;
+
+                a {
+                    text-decoration: none;
+                    color: #F8FDF6;
+                    text-transform: capitalize;
+                    font-size: 1rem;
+                }
+            }
+
+            li:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+.cta-block {
+    text-align: center;
+    padding: 1rem 0 3rem;
+
+    h1 {
+        color: #C574B6;
+        text-transform: uppercase;
+    }
+
+    p {
+        color: #5E5F70;
+    }
+
+    button {
+        color: #FCFDFF;
+        background-color: #C574B6;
+        text-transform: uppercase;
+        border-radius: 20px;
+        padding: 8px 19px;
+        font-weight: 700;
+        transition: background-color ease 0.5s;
+
+        &:hover {
+            background-color: #a12e8c;
+        }
+    }
+}
+
+.cta-list-bg {
+    background-image: url("/wp-content/themes/happykite/assets/img/services-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    margin-top: 60px;
+    color: #FEFEFA;
+
+    .cta-list {
+        padding: 3em 0;
+    }
+
+    .cta-list-service {
+        img {
+            height: 50px;
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        font-size: 1.05rem;
+        padding: 1em 0;
+    }
+
+    p {
+        color: #C0D9EB;
+    }
+
+    a {
+        color: #FEFEFA;
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-decoration: none;
+        position: relative;
+
+        &:after {
+            display: block;
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            width: 100%;
+            height: 2px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background-color: #C0D9EB;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+            &:after {
+                width: 0;
+            }
+        }
+    }
+}
+
+.portfolio {
+    padding-top: 3rem;
+
+    h2 {
+        color: #C675B8;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    h4 {
+        color: #4C9FD3;
+        text-transform: uppercase;
+        font-size: 1rem;
+        padding: 0.7em 0;
+    }
+
+    p {
+        color: #88878B;
+    }
+
+    a {
+        color: #D98ECC;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.9rem;
+        transition: color ease 0.5s;
+
+        &:hover {
+            color: #a12e8c;
+        }
+    }
+
+    img {
+        transition: transform ease 0.5s;
+        display: block;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .portfolio-content {
+        background-color: #fff;
+        padding: 0.5rem 1.5rem 1.5rem;
+    }
+
+    .portfolio-box {
+        margin-bottom: 2rem;
+    }
+}
+
+.info-company {
+    text-align: center;
+    margin: 6rem 0 -10em;
+    position: relative;
+    padding: 4rem;
+    background-image: url("/wp-content/themes/happykite/assets/img/about-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 35px;
+    @media only screen and (max-width: 768px) {
+        margin: 6rem 1rem -10em;
+        padding: 1rem;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        color: #FFFDFF;
+        font-weight: 600;
+    }
+
+    p {
+        color: #F8FDF6;
+        text-align: left;
+        font-size: 1.1rem;
+    }
+
+    .blur-info {
+        color: #EDC8E8;
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .cta-list-bg {
+        h4 {
+            padding: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .cta-list-service {
+            // padding-left: 3em;
+            padding: 1.5em 1rem;
+        }
+    }
+}
+/*!
+
+---------------------------------------------------------------
+Make your changes here
+---------------------------------------------------------------*/
